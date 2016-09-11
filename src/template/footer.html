@@ -1,0 +1,20 @@
+<footer class="clearfix">
+	<p>www.the-rest.ru 2015-2016 Все права защищены. При использовании материалов сайта активная ссылка на сайт обязательна.</p>
+</footer>
+<script src="js/libs.js"></script>
+<script>
+$(".form1").submit(function() {
+	var thisForm = $(this);
+	$.ajax({
+		type: "POST",
+		url: thisForm.attr("action"),
+		data: thisForm.serialize()
+	}).done(function() {
+		document.location.replace("form-submit.html");
+	})
+})
+</script>
+<script src="js/main.js"></script>
+</body>
+
+</html>
